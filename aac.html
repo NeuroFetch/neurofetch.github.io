@@ -2,36 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NeuroFetch AAC</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
+      background-color: #f0f4f8;
       padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
+      gap: 15px;
+      max-width: 800px;
+      margin: auto;
     }
     .button {
-      padding: 20px;
-      background-color: #fff;
+      background-color: #ffffff;
       border: 2px solid #ccc;
-      border-radius: 12px;
+      border-radius: 16px;
       text-align: center;
-      font-size: 18px;
+      font-size: 16px;
       cursor: pointer;
-      box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      padding: 12px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.2s;
     }
     .button:hover {
-      background-color: #e0f7fa;
+      background-color: #e6f7ff;
+    }
+    .button img {
+      width: 48px;
+      height: 48px;
+      display: block;
+      margin: 0 auto 8px;
     }
     #output {
-      margin-top: 20px;
+      margin-top: 30px;
       font-size: 24px;
-      background-color: #fff3cd;
+      text-align: center;
+      background-color: #fff9c4;
       padding: 10px;
       border-radius: 8px;
     }
@@ -40,15 +54,40 @@
 <body>
   <h1>NeuroFetch AAC</h1>
   <div class="grid" id="aac-buttons">
-    <div class="button" onclick="speak('I want')">I want</div>
-    <div class="button" onclick="speak('Help')">Help</div>
-    <div class="button" onclick="speak('Eat')">Eat</div>
-    <div class="button" onclick="speak('Bathroom')">Bathroom</div>
-    <div class="button" onclick="speak('Yes')">Yes</div>
-    <div class="button" onclick="speak('No')">No</div>
-    <div class="button" onclick="speak('More')">More</div>
-    <div class="button" onclick="speak('All done')">All done</div>
+    <div class="button" onclick="speak('I want')">
+      <img src="https://twemoji.maxcdn.com/v/latest/svg/1f447.svg" alt="I want" />
+      I want
+    </div>
+    <div class="button" onclick="speak('Help')">
+      <img src="https://twemoji.maxcdn.com/v/latest/svg/1f64b.svg" alt="Help" />
+      Help
+    </div>
+    <div class="button" onclick="speak('Eat')">
+      <img src="https://twemoji.maxcdn.com/v/latest/svg/1f374.svg" alt="Eat" />
+      Eat
+    </div>
+    <div class="button" onclick="speak('Bathroom')">
+      <img src="https://twemoji.maxcdn.com/v/latest/svg/1f6bd.svg" alt="Bathroom" />
+      Bathroom
+    </div>
+    <div class="button" onclick="speak('Yes')">
+      <img src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" alt="Yes" />
+      Yes
+    </div>
+    <div class="button" onclick="speak('No')">
+      <img src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" alt="No" />
+      No
+    </div>
+    <div class="button" onclick="speak('More')">
+      <img src="https://twemoji.maxcdn.com/v/latest/svg/2795.svg" alt="More" />
+      More
+    </div>
+    <div class="button" onclick="speak('All done')">
+      <img src="https://twemoji.maxcdn.com/v/latest/svg/1f6c4.svg" alt="All done" />
+      All done
+    </div>
   </div>
+
   <div id="output"></div>
 
   <script>
