@@ -26,20 +26,19 @@
       border: 2px solid #ccc;
       border-radius: 16px;
       text-align: center;
-      font-size: 18px;
+      font-size: 20px;
       cursor: pointer;
-      padding: 10px;
+      padding: 16px;
       box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
       transition: background-color 0.2s;
     }
     .button:hover {
       background-color: #e6f7ff;
     }
-    .button img {
-      width: 48px;
-      height: 48px;
+    .emoji {
+      font-size: 36px;
       display: block;
-      margin: 0 auto 6px;
+      margin-bottom: 8px;
     }
     #output {
       margin-top: 30px;
@@ -55,35 +54,35 @@
   <h1>NeuroFetch AAC</h1>
   <div class="grid" id="aac-buttons">
     <div class="button" onclick="speak('I want')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Finger-pointing-down.png/600px-Finger-pointing-down.png" alt="I want" />
+      <span class="emoji">👇</span>
       I want
     </div>
     <div class="button" onclick="speak('Help')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Help_icon.svg/1024px-Help_icon.svg.png" alt="Help" />
+      <span class="emoji">🙋</span>
       Help
     </div>
     <div class="button" onclick="speak('Eat')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Eo_circle_orange_white_fork_and_knife.svg/600px-Eo_circle_orange_white_fork_and_knife.svg.png" alt="Eat" />
+      <span class="emoji">🍽️</span>
       Eat
     </div>
     <div class="button" onclick="speak('Bathroom')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/WC_sign.svg/1024px-WC_sign.svg.png" alt="Bathroom" />
+      <span class="emoji">🚽</span>
       Bathroom
     </div>
     <div class="button" onclick="speak('Yes')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Yes_check.svg/1024px-Yes_check.svg.png" alt="Yes" />
+      <span class="emoji">✅</span>
       Yes
     </div>
     <div class="button" onclick="speak('No')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/No_sign_font_awesome.svg/1024px-No_sign_font_awesome.svg.png" alt="No" />
+      <span class="emoji">❌</span>
       No
     </div>
     <div class="button" onclick="speak('More')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Plus_symbol.svg/1024px-Plus_symbol.svg.png" alt="More" />
+      <span class="emoji">➕</span>
       More
     </div>
     <div class="button" onclick="speak('All done')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Flag_finish.svg/1024px-Flag_finish.svg.png" alt="All done" />
+      <span class="emoji">🏁</span>
       All done
     </div>
   </div>
