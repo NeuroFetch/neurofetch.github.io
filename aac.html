@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuroFetch AAC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .button {
+      padding: 20px;
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    .button:hover {
+      background-color: #e0f7fa;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 24px;
+      background-color: #fff3cd;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>NeuroFetch AAC</h1>
+  <div class="grid" id="aac-buttons">
+    <div class="button" onclick="speak('I want')">I want</div>
+    <div class="button" onclick="speak('Help')">Help</div>
+    <div class="button" onclick="speak('Eat')">Eat</div>
+    <div class="button" onclick="speak('Bathroom')">Bathroom</div>
+    <div class="button" onclick="speak('Yes')">Yes</div>
+    <div class="button" onclick="speak('No')">No</div>
+    <div class="button" onclick="speak('More')">More</div>
+    <div class="button" onclick="speak('All done')">All done</div>
+  </div>
+  <div id="output"></div>
+
+  <script>
+    function speak(text) {
+      document.getElementById('output').innerText = text;
+      const utterance = new SpeechSynthesisUtterance(text);
+      speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>
